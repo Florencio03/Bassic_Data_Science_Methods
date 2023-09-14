@@ -1,0 +1,19 @@
+def feet_inches_to_meters(height):
+    # Split the height into feet and inches
+    feet, inches = map(int, height.split('-'))
+
+    # Convert feet to meters (1 foot = 0.3048 meters)
+    feet_to_meters = feet * 0.3048
+
+    # Convert inches to meters (1 inch = 0.0254 meters)
+    inches_to_meters = inches * 0.0254
+
+    # Calculate the total height in meters
+    height_in_meters = feet_to_meters + inches_to_meters
+
+    return height_in_meters
+
+# Example usage:
+height_str = "5-1"
+height_in_meters = feet_inches_to_meters(height_str)
+print(f"{height_str} is approximately {height_in_meters:.2f} meters.")
